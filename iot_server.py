@@ -13,6 +13,7 @@ import time
 import subprocess
 import threading as thread
 import logging as log
+import os
 
 
 class IOTServer(object):
@@ -78,7 +79,7 @@ class IOTServer(object):
 
             self._web_server_process = subprocess.Popen(
                 [
-                    "python",
+                    "python3",
                     "webserver.py",
                     self._web_sever_address,
                     str(self._web_sever_port),

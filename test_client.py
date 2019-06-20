@@ -45,78 +45,20 @@ class MockTCPClient(object):
 
 if __name__ == '__main__':
 
-    import time
-
     test_client = MockTCPClient(
         remote_address=REMOTE_HOST_ADDRESS,
         remote_port=REMOTE_HOST_PORT,
     )
 
-    # add module
-    request = iot_message.IOTMessage()
-    request.set_message_type(iot_message.REQUEST)
-    request.set_operation(iot_message.ADD_NODE)
-    request.set_source(iot_message.REMOTE_MODULE)
-    request.set_data(
-        {
-            "id": "ilm_1_12345"
-        }
-    )
-    _, request_string = request.stringfy()
-    test_client.write(request_string)
+    print("-----------------------------------------------")
+    print("| ---------- IOT Server Tester -------------- |")
+    print("-----------------------------------------------")
 
-    time.sleep(5)
+    while True:
 
-    # update module data
-    request = iot_message.IOTMessage()
-    request.set_message_type(iot_message.REQUEST)
-    request.set_operation(iot_message.UPDATE_DATA)
-    request.set_source(iot_message.REMOTE_MODULE)
-    request.set_data(
-        {
-            "id": "ilm_1_12345",
-            "state": "on",
-        }
-    )
-    _, request_string = request.stringfy()
-    test_client.write(request_string)
+        message_string = input("Enter message to send: ")
 
-    time.sleep(5)
+        test_client.write(message_string)
 
-    # update module data
-    request = iot_message.IOTMessage()
-    request.set_message_type(iot_message.REQUEST)
-    request.set_operation(iot_message.UPDATE_DATA)
-    request.set_source(iot_message.REMOTE_MODULE)
-    request.set_data(
-        {
-            "id": "ilm_1_12345",
-            "state": "off",
-        }
-    )
-    _, request_string = request.stringfy()
-    test_client.write(request_string)
-
-    time.sleep(5)
-
-    # update module data
-    request = iot_message.IOTMessage()
-    request.set_message_type(iot_message.REQUEST)
-    request.set_operation(iot_message.REMOVE_NODE)
-    request.set_source(iot_message.REMOTE_MODULE)
-    request.set_data(
-        {
-            "id": "ilm_1_12345",
-        }
-    )
-    _, request_string = request.stringfy()
-    test_client.write(request_string)
-
-    time.sleep(5)
-
-
-
-
-
-
+        print("*************************************************")
 

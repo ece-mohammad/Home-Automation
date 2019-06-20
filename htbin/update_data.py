@@ -5,12 +5,21 @@ __version__ = 1.2
 __author__ = "Mohammad Mohsen"
 
 
+import sys
+import os
+
+
+# on linux systems, add parent folder directory to path
+if sys.platform != "win32":
+    sys.path.insert(0, os.path.abspath("."))
+
+
 import cgi
 import cgitb
-import iot_message
-from module import Module
 import socket
+import iot_message
 import iot_error
+from module import Module
 from config import TCP_SERVER_CONFIG
 
 
@@ -25,7 +34,7 @@ def response(message="", redirect_time=3):
     """
     source = """
     <html>
-        <meta http-equiv="refresh" content="{redirect_time};url=http://192.168.137.1/">
+        <meta http-equiv="refresh" content="{redirect_time};url=/home.html">
         
         <body>
             <p>
@@ -109,29 +118,29 @@ update_status = main()
 
 # check module update status
 if update_status.code == iot_error.SUCCESS.code:
-    response_message = response(message="Module update successfully.", redirect_time=10)
+    response_message = response(message="Module update successfully.", redirect_time=3)
 
 elif update_status.code == iot_error.UNSUPPORTED_MODULE.code:
-    response_message = response(message="Unsupported module. Make sure the server is up to date!", redirect_time=10)
+    response_message = response(message="Unsupported module. Make sure the server is up to date!", redirect_time=3)
 
 elif update_status.code == iot_error.UNREGISTERED_MODULE.code:
-    response_message = response(message="Unregistered module. Register the module and try again!", redirect_time=10)
+    response_message = response(message="Unregistered module. Register the module and try again!", redirect_time=3)
 
 elif update_status.code == iot_error.MISSING_MODULE_ARGS.code:
-    response_message = response(message="Missing module parameters!", redirect_time=10)
+    response_message = response(message="Missing module parameters!", redirect_time=3)
 
 elif update_status.code == iot_error.MISSING_MODULE_ID.code:
-    response_message = response(message="Missing module ID!", redirect_time=10)
+    response_message = response(message="Missing module ID!", redirect_time=3)
 
 elif update_status.code == iot_error.INVALID_DATA_FILED_VALUE.code:
-    response_message = response(message="Invalid data field in module parameters", redirect_time=10)
+    response_message = response(message="Invalid data field in module parameters", redirect_time=3)
 
 elif update_status.code == iot_error.MISSING_MODULE_IP.code:
-    response_message = response(message="Missing module IP!", redirect_time=10)
+    response_message = response(message="Missing module IP!", redirect_time=3)
 
 else:
 
-    response_message = response(message="Module update failed!", redirect_time=10)
+    response_message = response(message="Module update failed!", redirect_time=3)
     print("Update status [{}]: {}".format(update_status.code, update_status.string))
 
 print(response_message)

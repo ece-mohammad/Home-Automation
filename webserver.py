@@ -11,6 +11,7 @@ import logging as log
 from http.server import HTTPServer, CGIHTTPRequestHandler
 import config
 
+
 # default server settings (IP/socket)
 HOST_NAME = config.WEB_SERVER_CONFIG["IP"]
 PORT_NUMBER = config.WEB_SERVER_CONFIG["PORT"]
@@ -105,4 +106,3 @@ if __name__ == '__main__':
     else:
         print("Invalid server address! Server requires an IP address and a port number!")
         sys.exit(-1)
-
