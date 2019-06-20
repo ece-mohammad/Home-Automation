@@ -320,65 +320,67 @@ class ModuleManager(object):
         :return: None
         """
 
-        try:
+        while self._running:
 
-            # get message from message queue
-            message = self.message_queue.get(block=True, timeout=1)
+            try:
 
-            assert isinstance(message, TCPMessage)
+                # get message from message queue
+                message = self.message_queue.get(block=True, timeout=1)
 
-            self._logger.debug("[{}]::Processing message: {}".format(
-                    thread.current_thread(),
-                    message.get_message_string()
+                assert isinstance(message, TCPMessage)
+
+                self._logger.debug("[{}]::Processing message: {}".format(
+                        thread.current_thread(),
+                        message.get_message_string()
+                    )
                 )
-            )
 
-            # status
-            status = iot_error.FAILED
+                # status
+                status = iot_error.FAILED
 
-            # get message string
-            message_string = message.get_message_string()
+                # get message string
+                message_string = message.get_message_string()
 
-            # get message address
-            message_address = message.get_message_address()
+                # get message address
+                message_address = message.get_message_address()
 
-            # validate message string
-            validation_result, parsed_message = iot_message.IOTMessage.parse_message_string(message_string)
+                # validate message string
+                validation_result, parsed_message = iot_message.IOTMessage.parse_message_string(message_string)
 
-            # check if message string is valid
-            if validation_result.code == iot_error.SUCCESS.code:
+                # check if message string is valid
+                if validation_result.code == iot_error.SUCCESS.code:
 
-                # get message type
-                message_type = parsed_message.get_message_type()
+                    # get message type
+                    message_type = parsed_message.get_message_type()
 
-                # get message data
-                message_data = parsed_message.get_data()
+                    # get message data
+                    message_data = parsed_message.get_data()
 
-                # add message address to message data
-                message_data["ip"] = message_address
+                    # add message address to message data
+                    message_data["ip"] = message_address
 
-                # update parsed message data with message address
-                # (required for add_node method)
-                parsed_message.set_data(message_data)
+                    # update parsed message data with message address
+                    # (required for add_node method)
+                    parsed_message.set_data(message_data)
 
-                # check for request message
-                if message_type == iot_message.REQUEST:
-                    status = self.process_request(parsed_message)
+                    # check for request message
+                    if message_type == iot_message.REQUEST:
+                        status = self.process_request(parsed_message)
 
-                # check for response message
-                elif message_type == iot_message.RESPONSE:
-                    status = self.process_response(parsed_message)
+                    # check for response message
+                    elif message_type == iot_message.RESPONSE:
+                        status = self.process_response(parsed_message)
 
-            # message string is invalid
-            else:
-                status = validation_result
+                # message string is invalid
+                else:
+                    status = validation_result
 
-            # log message processing status
-            self._logger.debug("[{}]::Message processing status: {}".format(thread.current_thread(), status.string))
+                # log message processing status
+                self._logger.debug("[{}]::Message processing status: {}".format(thread.current_thread(), status.string))
 
-        except queue.Empty:
-            # self._logger.debug("[{}] :: Message queue is empty".format(thread.current_thread()))
-            pass
+            except queue.Empty:
+                # self._logger.debug("[{}] :: Message queue is empty".format(thread.current_thread()))
+                pass
 
     def process_request(self, request):
         """
@@ -544,17 +546,15 @@ class ModuleManager(object):
 
         self._logger.debug("Staring module manager...")
 
-        while self._running:
+        # spawn worker threads
+        for worker in range(self._num_of_workers):
 
-            # spawn worker threads
-            for worker in range(self._num_of_workers):
+            worker_id = "WorkerThread_"+str(worker)
+            worker = thread.Thread(target=self.process_message, name=worker_id)
+            self._workers[worker_id] = worker
+            worker.start()
+            worker.join()
 
-                worker_id = "WorkerThread_"+str(worker)
-                worker = thread.Thread(target=self.process_message, name=worker_id)
-                self._workers[worker_id] = worker
-                worker.start()
-                worker.join()
-                # self._logger.debug("Started worker thread: {}".format(worker.getName()))
 
             time.sleep(1)
 
