@@ -1,0 +1,25 @@
+<div class="module" id="{id}">
+
+    <form action="/htbin/update_data.py" method="post" target="_self">
+
+        <p>
+            <!--            name label          -->
+            <label for="name_field">Name</label>
+
+            <!--            name filed          -->
+            <input id="name_field" type="text" name="name">
+
+            <!--            id field            -->
+            <input type="hidden" name="id" value="{id}">
+
+            <!--            add button          -->
+            <button id="addButton" type="submit" name="action" value="add">Add</button>
+
+            <!--            remove button       -->
+            <button id="removeButton" type="submit" name="action" value="remove">Remove</button>
+
+        </p>
+
+    </form>
+
+</div>

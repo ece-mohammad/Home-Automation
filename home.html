@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<!--    version: 1.2   -->
+
+<html>
+
+  <!--  Page encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Scripts -->
+
+  <!-- 1 - Load modules after main page loading -->
+  <script language="JavaScript">
+    document.addEventListener('DOMContentLoaded', function()
+      {
+        var req = new XMLHttpRequest();
+
+        req.onreadystatechange = function()
+          {
+            if(this.readyState == 4 && this.status == 200)
+            {
+              document.getElementsByClassName("modules")[0].innerHTML = this.response;
+            }
+          }
+
+        req.open("POST", "http://192.168.137.1/htbin/load_modules.py?", true);
+        req.send();
+
+      }
+    );
+  </script>
+<!--2 - load module data, then update module html accordingly -->
+
+  <!-- Page Title -->
+  <head>
+
+  <title>Simple Web interface</title>
+
+  </head>
+
+  <body>
+
+    <h2>Current modules:</h2>
+
+    <div class="modules">
+
+    </div>
+
+  </body>
+
+</html>
