@@ -38,6 +38,7 @@ MISSING_MODULE_DATA_TEMPLATE = _ERROR_CODES("MissingModuleDataTemplate", 71)
 MISSING_MODULE_HTML_FILE = _ERROR_CODES("MissingModuleHTMLFile", 72)
 MISSING_MODULE_DATA_FILE = _ERROR_CODES("MissingModuleDataFile", 73)
 MISSING_MODULE_IP = _ERROR_CODES("MissingModuleIP", 74)
+MISSING_MODULE_INFO_FILE = _ERROR_CODES("MissingModuleInfoFile", 75)
 
 
 if __name__ == '__main__':

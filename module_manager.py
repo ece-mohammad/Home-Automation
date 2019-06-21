@@ -227,6 +227,44 @@ class ModuleManager(object):
 
         # module_data is already registered
         else:
+
+            # TODO:: Test module volatility
+
+            # check module volatility
+
+            # get module type
+            module_type = module.get_module_type()
+
+            # get module info file
+            module_info_file = os.path.join(self._templates_dir, module_type, "info.json")
+
+            # check if module info file exists
+            if os.path.exists(module_info_file) and os.path.isfile(module_info_file):
+
+                # get module info
+                with open(module_info_file, 'r') as fh:
+                    module_info = json.loads(fh.read().strip())
+
+                # get module volatility info
+                module_volatility = module_info["volatile"]
+
+                # check if module is volatile
+                if module_volatility:
+
+                    # remove module
+                    self.remove_module(module_data=module_data)
+
+                    # add module
+                    status = self.add_module(module_data=module_data)
+
+                # module is not volatile
+                else:
+                    status = iot_error.SUCCESS
+
+            # module info file doesn't exist
+            else:
+                status = iot_error.MISSING_MODULE_INFO_FILE
+
             status = iot_error.SUCCESS
 
         return status
