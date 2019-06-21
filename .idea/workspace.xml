@@ -11,22 +11,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htbin/update_data.py">
+        <entry file="file://$PROJECT_DIR$/module_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
-              <caret line="111" selection-start-line="111" selection-end-line="111" />
-              <folding>
-                <element signature="e#76#86#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="194">
+              <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_client.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/module_manager.py">
+        <entry file="file://$PROJECT_DIR$/tcp_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="323" column="12" selection-start-line="323" selection-start-column="12" selection-end-line="323" selection-end-column="12" />
+            <state relative-caret-position="570">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
@@ -81,9 +87,7 @@
         <option value="$PROJECT_DIR$/iot_message.py" />
         <option value="$PROJECT_DIR$/module.py" />
         <option value="$PROJECT_DIR$/iot_error.py" />
-        <option value="$PROJECT_DIR$/tcp_server.py" />
         <option value="$PROJECT_DIR$/home.html" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/webserver.py" />
         <option value="$PROJECT_DIR$/test_client.py" />
@@ -93,6 +97,8 @@
         <option value="$PROJECT_DIR$/iot_server.py" />
         <option value="$PROJECT_DIR$/htbin/update_data.py" />
         <option value="$PROJECT_DIR$/module_manager.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/tcp_server.py" />
       </list>
     </option>
   </component>
@@ -108,7 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,10 +121,16 @@
               <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.webserver">
+  <component name="RunManager" selected="Python.iot_server">
     <configuration name="iot_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IOT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -272,9 +283,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.iot_server" />
         <item itemvalue="Python.webserver" />
         <item itemvalue="Python.test_client" />
-        <item itemvalue="Python.iot_server" />
         <item itemvalue="Python.tcp_server" />
         <item itemvalue="Python.module_manager" />
       </list>
@@ -411,13 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auxiliary_tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -463,9 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tcp_server.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/webserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -503,23 +504,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/ilm_1_123/ilm.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/ilm_0_123/ilm.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htbin/update_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="1349">
+          <caret line="71" column="46" lean-forward="true" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
           <folding>
             <element signature="e#76#86#0" expanded="true" />
           </folding>
@@ -528,8 +529,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="323" column="12" selection-start-line="323" selection-start-column="12" selection-end-line="323" selection-end-column="12" />
+        <state relative-caret-position="194">
+          <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcp_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>

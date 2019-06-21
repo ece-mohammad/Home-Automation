@@ -88,8 +88,8 @@ class CustomTCPServer(object):
                 remote_address = message.get_message_address()
 
                 # TODO :: change remote port, 5070 is used to echo responses back to the server for debugging
-                # remote_port = NODE_CONFIG["SERVER_PORT"]
-                remote_port = 5070
+                remote_port = NODE_CONFIG["SERVER_PORT"]
+                # remote_port = 5070
 
                 message_string = message.get_message_string()
 

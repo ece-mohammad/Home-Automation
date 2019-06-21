@@ -5,7 +5,7 @@ TCP_SERVER_CONFIG = {
 
 WEB_SERVER_CONFIG = {
     "IP": "127.0.0.1",
-    "PORT": 80,
+    "PORT": 8080,
 }
 
 NODE_CONFIG = {
