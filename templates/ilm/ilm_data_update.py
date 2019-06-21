@@ -40,7 +40,7 @@ def update(args):
             if args["state"] != local_module_data["state"]:
                 local_module_data["state"] = args["state"]
 
-                # write data to json file
+                # send_message data to json file
                 with open(module_data_file, 'w') as df:
                     df.write(json.dumps(local_module_data).strip())
 
@@ -62,7 +62,7 @@ def update(args):
                     mod_html = re.sub(on_button, "\\1unchecked>", mod_html)
                     mod_html = re.sub(off_button, "\\1checked>", mod_html)
 
-                # write new html to mod_html file
+                # send_message new html to mod_html file
                 with open(module_html_file, 'w') as mh:
                     mh.write(mod_html)
 

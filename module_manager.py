@@ -228,42 +228,42 @@ class ModuleManager(object):
         # module_data is already registered
         else:
 
-            # TODO:: Test module volatility
-
-            # check module volatility
-
-            # get module type
-            module_type = module.get_module_type()
-
-            # get module info file
-            module_info_file = os.path.join(self._templates_dir, module_type, "info.json")
-
-            # check if module info file exists
-            if os.path.exists(module_info_file) and os.path.isfile(module_info_file):
-
-                # get module info
-                with open(module_info_file, 'r') as fh:
-                    module_info = json.loads(fh.read().strip())
-
-                # get module volatility info
-                module_volatility = module_info["volatile"]
-
-                # check if module is volatile
-                if module_volatility:
-
-                    # remove module
-                    self.remove_module(module_data=module_data)
-
-                    # add module
-                    status = self.add_module(module_data=module_data)
-
-                # module is not volatile
-                else:
-                    status = iot_error.SUCCESS
-
-            # module info file doesn't exist
-            else:
-                status = iot_error.MISSING_MODULE_INFO_FILE
+            # # TODO:: Test module volatility
+            #
+            # # check module volatility
+            #
+            # # get module type
+            # module_type = module.get_module_type()
+            #
+            # # get module info file
+            # module_info_file = os.path.join(self._templates_dir, module_type, "info.json")
+            #
+            # # check if module info file exists
+            # if os.path.exists(module_info_file) and os.path.isfile(module_info_file):
+            #
+            #     # get module info
+            #     with open(module_info_file, 'r') as fh:
+            #         module_info = json.loads(fh.read().strip())
+            #
+            #     # get module volatility info
+            #     module_volatility = module_info["volatile"]
+            #
+            #     # check if module is volatile
+            #     if module_volatility:
+            #
+            #         # remove module
+            #         self.remove_module(module_data=module_data)
+            #
+            #         # add module
+            #         status = self.add_module(module_data=module_data)
+            #
+            #     # module is not volatile
+            #     else:
+            #         status = iot_error.SUCCESS
+            #
+            # # module info file doesn't exist
+            # else:
+            #     status = iot_error.MISSING_MODULE_INFO_FILE
 
             status = iot_error.SUCCESS
 
@@ -432,6 +432,10 @@ class ModuleManager(object):
         # status
         status = iot_error.FAILED
 
+        # build response message
+        response = iot_message.IOTMessage()
+        response.set_source(iot_message.TCP_SERVER)
+
         # get request type
         request_type = request.get_operation()
 
@@ -477,46 +481,65 @@ class ModuleManager(object):
 
         # check for data update request
         elif request_type == iot_message.UPDATE_DATA:
-
             status = self.update_module_data(request_data)
+
+        """     build response message      """
+
+        if (request_type == iot_message.ADD_NODE) or (request_type == iot_message.REMOVE_NODE):
+
+            # get module address
+            module_address = request_data.get("ip")
+
+            # complete response message
+            response.set_message_type(iot_message.RESPONSE)
+            response.set_source(iot_message.TCP_SERVER)
+            response.set_operation(status.string)
+            response.set_data(
+                {
+                    "reason": status.string,
+                }
+            )
+
+        elif request_type == iot_message.UPDATE_DATA:
+
+            # get module IP from local data file
+            module_data_file = os.path.join(self._modules_dir, module_name, module_type + ".json")
+
+            # load module data
+            with open(module_data_file, 'r') as fh:
+                module_data = json.loads(fh.read().strip())
 
             # get request source
             request_source = request.get_source()
 
             # check request source
-            # (LOCAL_SCRIPT means that the request was sent by a CGI script, so
+            # (WEB_SERVER means that the request was sent by a CGI script, so
             # the IP passed with the request is the web server's IP and not the module's actual IP)
-            if request_source == iot_message.LOCAL_SCRIPT:
+            if request_source == iot_message.WEB_SERVER:
 
-                # get module name
-                module_name = request_data.get("id")
-
-                # module instance
-                module = Module(name=module_name)
-
-                # get module type
-                module_type = module.get_module_type()
-
-                # get module IP from
-                module_data_file = os.path.join(self._modules_dir, module_name, module_type+".json")
-
-                # load module data
-                with open(module_data_file, 'r') as fh:
-                    module_data = json.loads(fh.read().strip())
-
-                # get module ip
                 module_address = module_data.get("ip")
+                response_data = module_data
 
-        # build response message
-        response = iot_message.IOTMessage()
-        response.set_message_type(iot_message.RESPONSE)
-        response.set_source(iot_message.REMOTE_MODULE)
-        response.set_operation(status.string)
-        response.set_data(
-            {
-                "reason": status.string
-            }
-        )
+                # add module id to response data
+                response_data["id"] = module_name
+
+                # remove node IP from response data
+                del response_data["ip"]
+
+                # build response
+                response.set_message_type(iot_message.REQUEST)
+                response.set_operation(iot_message.UPDATE_DATA)
+                response.set_data(response_data)
+
+            else:
+                response.set_message_type(iot_message.RESPONSE)
+                response.set_operation(status.string)
+                response.set_data(
+                    {
+                        "reason": status.string,
+                    }
+                )
+                module_address = request_data.get("ip")
 
         # build response string
         response_validation, response_string = response.stringfy()

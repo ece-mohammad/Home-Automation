@@ -71,7 +71,7 @@ def main():
     request_message = iot_message.IOTMessage()
     request_message.set_message_type(iot_message.REQUEST)
     request_message.set_operation(iot_message.UPDATE_DATA)
-    request_message.set_source(iot_message.LOCAL_SCRIPT)
+    request_message.set_source(iot_message.WEB_SERVER)
     request_message.set_data(
         dict(form_data)
     )

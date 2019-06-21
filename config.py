@@ -1,15 +1,15 @@
 TCP_SERVER_CONFIG = {
-    "IP": "127.0.0.1",
+    "IP": "192.168.137.1",
     "PORT": 5070,
 }
 
 WEB_SERVER_CONFIG = {
-    "IP": "127.0.0.1",
-    "PORT": 8080,
+    "IP": "192.168.137.1",
+    "PORT": 80,
 }
 
 NODE_CONFIG = {
-    "SERVER_PORT": 1234,
+    "PORT": 1234,
     "TIMEOUT": 10,
 }
 

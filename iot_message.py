@@ -19,8 +19,8 @@ REMOVE_NODE = "REMOVE_NODE"
 UPDATE_DATA = "UPDATE_DATA"
 
 """     message Sources     """
-REMOTE_MODULE = "REMOTE_MODULE"
-LOCAL_SCRIPT = "LOCAL_SCRIPT"
+TCP_SERVER = "TCP_SERVER"
+WEB_SERVER = "WEB_SERVER"
 
 """     general response messages       """
 SUCCESS = iot_error.SUCCESS.string
@@ -60,8 +60,8 @@ class IOTMessage(object):
 
     """     Message Sources     """
     _SOURCES = {
-        LOCAL_SCRIPT: 1,
-        REMOTE_MODULE: 2,
+        TCP_SERVER: 1,
+        WEB_SERVER: 2,
     }
 
     """     Message Types       """
@@ -574,7 +574,7 @@ if __name__ == '__main__':
         # initialized request
         test_request.set_message_type(REQUEST)
         test_request.set_operation(ADD_NODE)
-        test_request.set_source(REMOTE_MODULE)
+        test_request.set_source(TCP_SERVER)
         test_request.set_data(
             {
                 "id": "ilm_001_123",
@@ -590,7 +590,7 @@ if __name__ == '__main__':
         test_response = IOTMessage()
         test_response.set_message_type(RESPONSE)
         test_response.set_operation(SUCCESS)
-        test_response.set_source(REMOTE_MODULE)
+        test_response.set_source(TCP_SERVER)
         test_response.set_data(
             {
                 "reason": iot_error.SUCCESS.string,
@@ -604,7 +604,7 @@ if __name__ == '__main__':
         # invalid message type
         invalid_request = IOTMessage()
         invalid_request.set_message_type("InvalidType")
-        invalid_request.set_source(REMOTE_MODULE)
+        invalid_request.set_source(TCP_SERVER)
         invalid_request.set_operation(ADD_NODE)
         invalid_request.set_data(
             {
@@ -620,7 +620,7 @@ if __name__ == '__main__':
         # invalid request operation
         invalid_request = IOTMessage()
         invalid_request.set_message_type(REQUEST)
-        invalid_request.set_source(REMOTE_MODULE)
+        invalid_request.set_source(TCP_SERVER)
         invalid_request.set_operation("InvalidOperation")
         invalid_request.set_data(
             {
@@ -636,7 +636,7 @@ if __name__ == '__main__':
         # invalid response operation
         invalid_request = IOTMessage()
         invalid_request.set_message_type(RESPONSE)
-        invalid_request.set_source(REMOTE_MODULE)
+        invalid_request.set_source(TCP_SERVER)
         invalid_request.set_operation("InvalidOperation")
         invalid_request.set_data(
             {
@@ -651,7 +651,7 @@ if __name__ == '__main__':
         # missing ID
         invalid_request = IOTMessage()
         invalid_request.set_message_type(REQUEST)
-        invalid_request.set_source(REMOTE_MODULE)
+        invalid_request.set_source(TCP_SERVER)
         invalid_request.set_operation(ADD_NODE)
         invalid_request.set_data(
             {
@@ -681,7 +681,7 @@ if __name__ == '__main__':
         # stringfy add_node request
         request = IOTMessage()
         request.set_message_type(REQUEST)
-        request.set_source(REMOTE_MODULE)
+        request.set_source(TCP_SERVER)
         request.set_operation(ADD_NODE)
         request.set_data(
             {
@@ -698,7 +698,7 @@ if __name__ == '__main__':
         # atringfy removew_node request
         request = IOTMessage()
         request.set_message_type(REQUEST)
-        request.set_source(REMOTE_MODULE)
+        request.set_source(TCP_SERVER)
         request.set_operation(REMOVE_NODE)
         request.set_data(
             {
@@ -714,7 +714,7 @@ if __name__ == '__main__':
         # stringfy data update request
         request = IOTMessage()
         request.set_message_type(REQUEST)
-        request.set_source(REMOTE_MODULE)
+        request.set_source(TCP_SERVER)
         request.set_operation(UPDATE_DATA)
         request.set_data(
             {
@@ -731,7 +731,7 @@ if __name__ == '__main__':
         # stringfy success response
         response = IOTMessage()
         response.set_message_type(RESPONSE)
-        response.set_source(REMOTE_MODULE)
+        response.set_source(TCP_SERVER)
         response.set_operation(SUCCESS)
         response.set_data(
             {

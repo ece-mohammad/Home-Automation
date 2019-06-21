@@ -42,7 +42,7 @@ def update(args):
                 if args["state"] != mod_data["state"]:
                     mod_data["state"] = args["state"]
 
-                    # write data to json file
+                    # send_message data to json file
                     with open(mod_data_file, 'w') as df:
                         df.write(json.dumps(mod_data).strip())
 
@@ -67,7 +67,7 @@ def update(args):
                     else:
                         status = iot_error.INVALID_DATA_FILED_VALUE
 
-                    # write new html to mod_html file
+                    # send_message new html to mod_html file
                     with open(mod_html_file, 'w') as mh:
                         mh.write(mod_html)
 
