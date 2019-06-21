@@ -10,8 +10,7 @@ import os
 
 
 # on linux systems, add parent folder directory to path
-if sys.platform != "win32":
-    sys.path.insert(0, os.path.abspath("."))
+sys.path.insert(0, os.path.abspath("."))
 
 
 import cgi
