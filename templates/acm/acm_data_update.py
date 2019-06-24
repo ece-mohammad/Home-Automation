@@ -7,7 +7,6 @@ __author__ = "Mohammad Mohsen"
 
 import json
 import iot_error
-import iot_message
 import time
 from datetime import date
 

@@ -31,9 +31,9 @@ class Module(object):
     def get_module_type(self):
         return self._type
 
-    def set_module_id(self, id):
-        if id is not None:
-            self._id = id
+    def set_module_id(self, module_id):
+        if module_id is not None:
+            self._id = module_id
 
     def get_module_id(self):
         return self._id

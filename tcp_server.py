@@ -82,17 +82,20 @@ class CustomTCPServer(object):
 
             try:
 
+                # get message from message queue
                 message = self.transmit_buffer.get(block=True, timeout=1)
                 assert isinstance(message, TCPMessage)
 
+                # get address of the remote server to send message to
                 remote_address = message.get_message_address()
 
-                # TODO :: change remote port, 5070 is used to echo responses back to the server for debugging
+                # get port of remote server
                 remote_port = NODE_CONFIG["PORT"]
-                # remote_port = 5070
 
+                # gte message string
                 message_string = message.get_message_string()
 
+                # create a local socket to send a message through
                 send_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 send_socket.connect((remote_address, remote_port))
                 send_socket.settimeout(5)
@@ -125,6 +128,7 @@ class CustomTCPServer(object):
                 )
 
             finally:
+                # wait for 100 msec before checking transmit buffer again
                 time.sleep(0.1)
 
     def receive_message(self):
@@ -137,15 +141,19 @@ class CustomTCPServer(object):
 
             try:
 
+                # create open remote client connection and get remote client address
                 client_socket, (client_address, client_port) = self._server_socket.accept()
 
+                # receive message from remote client
                 request_string = client_socket.recv(1024).decode().strip()
 
+                # create a TCP message object from received message string
                 received_message = TCPMessage(
                     message=request_string,
                     address=client_address
                 )
 
+                # put message into receive buffer
                 self.receiver_buffer.put(received_message)
 
                 self._logger.debug("Received message: {} from ({},{})".format(
@@ -159,6 +167,7 @@ class CustomTCPServer(object):
                 print(e)
 
             finally:
+                # wait for 100 msec before checking receive buffer again
                 time.sleep(0.1)
 
     def server_forever(self):

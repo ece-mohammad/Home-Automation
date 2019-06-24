@@ -13,7 +13,6 @@ import time
 import subprocess
 import threading as thread
 import logging as log
-import os
 
 
 class IOTServer(object):

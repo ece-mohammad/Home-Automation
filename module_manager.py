@@ -35,7 +35,7 @@ class ModuleManager(object):
         self.message_queue = queue.Queue(maxsize=23)
         self.response_queue = queue.Queue(maxsize=23)
         self._running = False
-        self._num_of_workers = 5
+        self._num_of_workers = 3
         self._workers = dict()
 
     def check_module_version(self, module):
@@ -614,7 +614,6 @@ class ModuleManager(object):
             worker.start()
             worker.join()
 
-
             time.sleep(1)
 
     def stop(self):
@@ -633,9 +632,6 @@ class ModuleManager(object):
 
 
 if __name__ == '__main__':
-
-    from module import Module
-    import logging as log
 
     # configure logging level
     log.basicConfig(level=log.DEBUG)

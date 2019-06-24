@@ -139,7 +139,7 @@ elif update_status.code == iot_error.MISSING_MODULE_IP.code:
 
 else:
 
-    response_message = response(message="Module update failed!", redirect_time=10   )
+    response_message = response(message="Module update failed!", redirect_time=10)
     print("Update status [{}]: {}".format(update_status.code, update_status.string))
 
 print(response_message)
