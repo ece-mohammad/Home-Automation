@@ -117,29 +117,29 @@ update_status = main()
 
 # check module update status
 if update_status.code == iot_error.SUCCESS.code:
-    response_message = response(message="Module update successfully.", redirect_time=3)
+    response_message = response(message="Module update successfully.", redirect_time=10)
 
 elif update_status.code == iot_error.UNSUPPORTED_MODULE.code:
-    response_message = response(message="Unsupported module. Make sure the server is up to date!", redirect_time=3)
+    response_message = response(message="Unsupported module. Make sure the server is up to date!", redirect_time=10)
 
 elif update_status.code == iot_error.UNREGISTERED_MODULE.code:
-    response_message = response(message="Unregistered module. Register the module and try again!", redirect_time=3)
+    response_message = response(message="Unregistered module. Register the module and try again!", redirect_time=10)
 
 elif update_status.code == iot_error.MISSING_MODULE_ARGS.code:
-    response_message = response(message="Missing module parameters!", redirect_time=3)
+    response_message = response(message="Missing module parameters!", redirect_time=10)
 
 elif update_status.code == iot_error.MISSING_MODULE_ID.code:
-    response_message = response(message="Missing module ID!", redirect_time=3)
+    response_message = response(message="Missing module ID!", redirect_time=10)
 
 elif update_status.code == iot_error.INVALID_DATA_FILED_VALUE.code:
-    response_message = response(message="Invalid data field in module parameters", redirect_time=3)
+    response_message = response(message="Invalid data field in module parameters", redirect_time=10)
 
 elif update_status.code == iot_error.MISSING_MODULE_IP.code:
-    response_message = response(message="Missing module IP!", redirect_time=3)
+    response_message = response(message="Missing module IP!", redirect_time=10)
 
 else:
 
-    response_message = response(message="Module update failed!", redirect_time=3)
+    response_message = response(message="Module update failed!", redirect_time=10   )
     print("Update status [{}]: {}".format(update_status.code, update_status.string))
 
 print(response_message)

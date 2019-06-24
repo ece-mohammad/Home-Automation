@@ -1,24 +1,25 @@
-<div class="module" id="{id}">
+<div class="module" id="{module_type}">
 
     <form action="/htbin/update_data.py" method="post">
 
         <p>
             <!--            on radio button             -->
-            <input id="on_button" name="state" type="radio" value="on" unchecked>
+            <input id="onButton" name="state" type="radio" value="on" unchecked>
 
             <!--            on label            -->
-            <label for="on_button">ON</label>
+            <label for="onButton">ON</label>
 
             <!--            off radio button            -->
-            <input id="off_button" name="state" type="radio" value="off" unchecked>
+            <input id="offButton" name="state" type="radio" value="off" unchecked>
 
             <!--            off label           -->
-            <label for="off_button">OFF</label>
+            <label for="offButton">OFF</label>
 
         </p>
+
         <p>
             <!--            id field           -->
-            <input type="hidden" name="id" value="{id}">
+            <input type="hidden" name="id" value="{module_id}">
 
             <!--            submit button           -->
             <button id="submitButton" type="submit" value="state">Update</button>

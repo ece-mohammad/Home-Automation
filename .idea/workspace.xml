@@ -10,11 +10,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_html_temp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/acm/acm_data_update.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="372">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#76#87#0" expanded="true" />
               </folding>
@@ -22,20 +31,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_data_update.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_node_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/acm/acm_html_temp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="187">
+              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+              <folding>
+                <element signature="e#25#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,7 +57,6 @@
     <findStrings>
       <find>INVALID_MESSAGE</find>
       <find>(SERVER)</find>
-      <find>id</find>
       <find>AF_ALG</find>
       <find>server.AF</find>
       <find>\r\n</find>
@@ -63,6 +65,9 @@
       <find>Module(</find>
       <find>webserver</find>
       <find>5070</find>
+      <find>id</find>
+      <find>{id}</find>
+      <find>}</find>
     </findStrings>
     <replaceStrings>
       <replace>(TCP_INTERFACE)</replace>
@@ -78,8 +83,6 @@
         <option value="$PROJECT_DIR$/server_scripts/register_module.py" />
         <option value="$PROJECT_DIR$/server_scripts/unregister_module.py" />
         <option value="$PROJECT_DIR$/htbin/load_modules.py" />
-        <option value="$PROJECT_DIR$/templates/ilm/ilm_html_temp.html" />
-        <option value="$PROJECT_DIR$/templates/ilm/ilm_data_update.py" />
         <option value="$PROJECT_DIR$/templates/fpm/fpm_data_update.py" />
         <option value="$PROJECT_DIR$/auxiliary_tools.py" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -90,22 +93,31 @@
         <option value="$PROJECT_DIR$/htbin/__init__.py" />
         <option value="$PROJECT_DIR$/iot_server.py" />
         <option value="$PROJECT_DIR$/iot_server.py" />
-        <option value="$PROJECT_DIR$/htbin/update_data.py" />
-        <option value="$PROJECT_DIR$/templates/ilm/info.json" />
         <option value="$PROJECT_DIR$/templates/fpm/info.json" />
         <option value="$PROJECT_DIR$/templates/acm/info.json" />
         <option value="$PROJECT_DIR$/iot_error.py" />
         <option value="$PROJECT_DIR$/test_client.py" />
         <option value="$PROJECT_DIR$/Documentation/test_node_client.py" />
         <option value="$PROJECT_DIR$/test_node_client.py" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/iot_message.py" />
         <option value="$PROJECT_DIR$/tcp_server.py" />
-        <option value="$PROJECT_DIR$/test_node_server.py" />
+        <option value="$PROJECT_DIR$/htbin/update_data.py" />
+        <option value="$PROJECT_DIR$/modules/ilm_1_123/ilm.html" />
+        <option value="$PROJECT_DIR$/templates/ilm/ilm_data_update.py" />
+        <option value="$PROJECT_DIR$/templates/ilm/ilm_html_temp.html" />
+        <option value="$PROJECT_DIR$/templates/fpm/fpm_html_temp.html" />
+        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/module_manager.py" />
-        <option value="$PROJECT_DIR$/templates/acm/acm_html_temp.html" />
+        <option value="$PROJECT_DIR$/modules/acm_1_123/acm.json" />
+        <option value="$PROJECT_DIR$/templates/ilm/info.json" />
+        <option value="$PROJECT_DIR$/templates/acm/acm_data_temp.json" />
+        <option value="$PROJECT_DIR$/templates/ilm/ilm_data_temp.json" />
+        <option value="$PROJECT_DIR$/blank.html" />
         <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/templates/acm/acm_html_temp.html" />
+        <option value="$PROJECT_DIR$/scripts.js" />
         <option value="$PROJECT_DIR$/templates/acm/acm_data_update.py" />
+        <option value="$PROJECT_DIR$/test_node_server.py" />
       </list>
     </option>
   </component>
@@ -131,7 +143,18 @@
             <path>
               <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="acm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
@@ -182,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_node_client">
+  <component name="RunManager" selected="Python.iot_server">
     <configuration name="iot_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IOT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,14 +269,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="webserver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IOT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/webserver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.iot_server" />
       <item itemvalue="Python.test_node_client" />
       <item itemvalue="Python.test_node_server" />
+      <item itemvalue="Python.webserver" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.iot_server" />
+        <item itemvalue="Python.webserver" />
         <item itemvalue="Python.test_node_client" />
         <item itemvalue="Python.test_node_server" />
       </list>
@@ -281,7 +327,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.62482566" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31799164" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5230126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,17 +370,7 @@
     <entry file="file://C:/Python-3-5-3-x86/Lib/socketserver.py" />
     <entry file="file://C:/Python-3-5-3-x86/Lib/subprocess.py" />
     <entry file="file://$PROJECT_DIR$/server_scripts/register_module.py" />
-    <entry file="file://$PROJECT_DIR$/modules/ilm_1_123/ilm.html" />
     <entry file="file://$PROJECT_DIR$/server_scripts/unregister_module.py" />
-    <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_html_temp.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/acm/acm_data_temp.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/fpm/fpm_html_temp.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/fpm/fpm_data_update.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -346,9 +382,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/fpm/fpm_data_temp.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_data_temp.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
@@ -385,39 +418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py" />
     <entry file="file://$PROJECT_DIR$/htbin/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/htbin/load_modules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/ilm_1_123/ilm.json" />
-    <entry file="file://$PROJECT_DIR$/htbin/update_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="71" column="46" lean-forward="true" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
-          <folding>
-            <element signature="e#76#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ilm/info.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/fpm/info.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/acm/info.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="32" selection-start-column="32" selection-end-column="32" />
@@ -437,13 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1116">
           <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -474,16 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_node_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_node_client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -494,40 +479,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module_manager.py">
+    <entry file="file://C:/Python-3-5-3-x86/Lib/_bootlocale.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="525" column="51" lean-forward="true" selection-start-line="525" selection-start-column="51" selection-end-line="525" selection-end-column="51" />
+        <state relative-caret-position="170">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/acm/acm_html_temp.html">
+    <entry file="file://$PROJECT_DIR$/htbin/load_modules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/ilm_1_123/ilm.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/fpm/fpm_html_temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htbin/update_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="e#76#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/acm/info.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ilm/info.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_data_temp.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/acm_1_123/acm.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-407">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="442">
+          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/acm/acm_data_temp.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/acm_1_123/acm.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="50" selection-start-column="50" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/acm/acm_html_temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_data_update.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="153">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#76#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_html_temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/acm/acm_data_update.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="372">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#76#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_node_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -9,7 +9,7 @@ import sys
 class NodeServer(object):
 
     def __init__(self):
-        self._server_address = socket.gethostbyname(socket.gethostname())
+        self._server_address = config.TCP_SERVER_CONFIG["IP"]
         self._server_port = config.NODE_CONFIG["PORT"]
         self._server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 

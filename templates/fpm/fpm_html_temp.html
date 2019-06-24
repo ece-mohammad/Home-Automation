@@ -1,4 +1,4 @@
-<div class="module" id="{id}">
+<div class="module" id="{module_type}">
 
     <form action="/htbin/update_data.py" method="post" target="_self">
 
@@ -10,7 +10,7 @@
             <input id="name_field" type="text" name="name">
 
             <!--            id field            -->
-            <input type="hidden" name="id" value="{id}">
+            <input type="hidden" name="id" value="{module_id}">
 
             <!--            add button          -->
             <button id="addButton" type="submit" name="action" value="add">Add</button>

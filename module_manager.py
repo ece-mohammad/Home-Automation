@@ -204,10 +204,10 @@ class ModuleManager(object):
 
                 # make module_data html file
                 with open(module_temp_html_file, 'r') as fh:
-                    module_html = fh.read().strip().format(id=module_name)
+                    module_html = fh.read().strip()
 
                 with open(module_html_file, 'w') as fh:
-                    fh.write(module_html)
+                    fh.write(module_html.format(module_type=module_type, module_id=module_name))
 
                 # make module_data data file
                 with open(module_temp_data_file, 'r') as fh:
@@ -518,18 +518,16 @@ class ModuleManager(object):
             if request_source == iot_message.WEB_SERVER:
 
                 module_address = module_data.get("ip")
-                response_data = module_data
 
-                # add module id to response data
-                response_data["id"] = module_name
-
-                # remove node IP from response data
-                del response_data["ip"]
+                del request_data["module_data_file"]
+                del request_data["module_html_file"]
+                del request_data["module_directory"]
+                del request_data["ip"]
 
                 # build response
                 response.set_message_type(iot_message.REQUEST)
                 response.set_operation(iot_message.UPDATE_DATA)
-                response.set_data(response_data)
+                response.set_data(request_data)
 
             else:
                 response.set_message_type(iot_message.RESPONSE)
