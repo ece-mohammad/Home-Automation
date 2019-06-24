@@ -16,8 +16,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_html_temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="238">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -79,7 +88,6 @@
         <option value="$PROJECT_DIR$/modules/ilm_1_123/ilm.html" />
         <option value="$PROJECT_DIR$/templates/ilm/ilm_data_update.py" />
         <option value="$PROJECT_DIR$/templates/fpm/fpm_html_temp.html" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/modules/acm_1_123/acm.json" />
         <option value="$PROJECT_DIR$/templates/ilm/info.json" />
         <option value="$PROJECT_DIR$/templates/acm/acm_data_temp.json" />
@@ -89,7 +97,6 @@
         <option value="$PROJECT_DIR$/templates/acm/acm_html_temp.html" />
         <option value="$PROJECT_DIR$/scripts.js" />
         <option value="$PROJECT_DIR$/test_node_server.py" />
-        <option value="$PROJECT_DIR$/templates/ilm/ilm_html_temp.html" />
         <option value="$PROJECT_DIR$/templates/fpm/fpm_data_temp.json" />
         <option value="$PROJECT_DIR$/templates/acm/acm_data_update.py" />
         <option value="$PROJECT_DIR$/iot_server.py" />
@@ -99,6 +106,8 @@
         <option value="$PROJECT_DIR$/htbin/update_data.py" />
         <option value="$PROJECT_DIR$/module.py" />
         <option value="$PROJECT_DIR$/tcp_server.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/templates/ilm/ilm_html_temp.html" />
       </list>
     </option>
   </component>
@@ -120,6 +129,17 @@
             <path>
               <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTServer" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ilm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -304,7 +324,7 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49790794" weight="0.15389696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.15389696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50209206" side_tool="true" weight="0.15389696" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,7 +335,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32775453" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32775453" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32914925" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32775453" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32914925" />
@@ -421,13 +441,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/ilm_1_123/ilm.html" />
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/acm/info.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -608,10 +621,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ilm/ilm_html_temp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="238">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
