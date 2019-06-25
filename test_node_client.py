@@ -8,6 +8,7 @@ import config
 class NodeClient(object):
 
     def __init__(self):
+        # self._remote_address = "192.168.1.1"
         self._remote_address = config.TCP_SERVER_CONFIG["IP"]
         self._remote_port = config.TCP_SERVER_CONFIG["PORT"]
 

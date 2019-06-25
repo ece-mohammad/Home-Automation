@@ -49,8 +49,8 @@ def update(args):
                     mod_html = hf.read().strip()
 
                 # check_pattern
-                on_button = re.compile('(<input id="on_button".+?)(checked|unchecked)>')
-                off_button = re.compile('(<input id="off_button".+?)(checked|unchecked)>')
+                on_button = re.compile('(<input id="onButton".+?)(checked|unchecked)>')
+                off_button = re.compile('(<input id="offButton".+?)(checked|unchecked)>')
 
                 # modify on button tag
                 if args["state"] == "on":
