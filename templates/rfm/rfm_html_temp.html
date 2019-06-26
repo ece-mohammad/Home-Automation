@@ -1,0 +1,46 @@
+<div class="module" id="{module_type}">
+
+    <form action="/htbin/update_data.py" method="post" target="_self">
+
+        <p>
+            <!--            name label          -->
+            <label for="name_field">Name: </label>
+
+            <!--            name filed          -->
+            <input id="name_field" type="text" name="name" maxlength="15" autocomplete="on" pattern="[a-zA-Z]{{0,14}}">
+        </p>
+
+        <p>
+            <small>* name can include letters and spaces, less than 15 characters.</small>
+        </p>
+
+        <p>
+            <!--            id field            -->
+            <input type="hidden" name="id" value="{module_id}">
+
+            <!--            add button          -->
+            <button id="addButton" type="submit" name="action" value="add">Add</button>
+
+            <!--            remove button       -->
+            <button id="removeButton" type="submit" name="action" value="remove">Remove</button>
+
+            <!--            Clear input         -->
+            <button id="clearButton" type="reset">Clear</button>
+        </p>
+
+    </form>
+
+    <p>
+            <!--    display registered users    -->
+        <button id="displayAll" onclick='getUsers("{module_id}", "{module_type}")'>Display registered users</button>
+
+            <!--            display log         -->
+        <button id="displayLog" onclick='getLog("{module_id}", "{module_type}")'>Display Log</button>
+
+    </p>
+
+    <div id="resultTable">
+
+    </div>
+
+</div>
